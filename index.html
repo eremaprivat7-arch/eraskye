@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial,sans-serif;
+}
+
+button{
+padding:18px 50px;
+font-size:22px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+}
+
+audio{
+display:none;
+}
+</style>
+
+</head>
+<body>
+
+<button id="open">Открыть</button>
+
+<audio id="music" src="music.mp3" loop></audio>
+
+<script>
+const btn=document.getElementById("open");
+const music=document.getElementById("music");
+
+btn.onclick=()=>{
+music.play();
+btn.style.display="none";
+};
+</script>
+
+</body>
+</html>
